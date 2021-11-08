@@ -1,0 +1,36 @@
+<html>
+
+<head>
+  <!-- AFTER HTML loads in browser, browser will request for CSS. -->
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+
+<body>
+  <form action="/sighting/<%= sighting.index %>?_method=PUT" method="POST">
+    <label for="text">Text:</label><br>
+    <input type="text" id="fname" name="text" value="<%= sighting.text %>"><br>
+    <label for="date_time">Date_Time:</label><br>
+    <input type="text" id="date_time" name="date_time" value="<%= sighting.date_time %>"><br>
+    <label for="city">City:</label><br>
+    <input type="text" id="date_time" name="city" value="<%= sighting.city %>"><br>
+    <label for="state">State:</label><br>
+    <input type="text" id="state" name="state" value="<%= sighting.state %>"><br>
+    <label for="shape">Shape:</label><br>
+    <input type="text" id="shape" name="shape" value="<%= sighting.shape %>"><br>
+    <label for="duration">Duration:</label><br>
+    <input type="text" id="duration" name="duration" value="<%= sighting.duration %>"><br>
+    <label for="summary">Summary:</label><br>
+    <input type="text" id="summary" name="summary" value="<%= sighting.summary %>"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <form action="/sighting/<%= sighting.index %>?_method=DELETE" method="POST">
+    <input type="submit" value="Delete">
+  </form>
+</body>
+
+<footer>
+  <p><a href="/">Return to main page</a></p>
+</footer>
+
+</html>

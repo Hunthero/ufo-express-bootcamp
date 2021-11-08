@@ -1,0 +1,46 @@
+<html>
+
+<head>
+  <!-- AFTER HTML loads in browser, browser will request for CSS. -->
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+
+<body>
+  <!-- <%=console.log(jsonData) %> -->
+  <% for(var i=0; i<jsonData.sightings.length; i++) {%>
+    <h2>Sighting <%= [i] %>
+    </h2>
+    <p><strong><u>
+          Sighting</strong></u><br>
+      <%= jsonData.sightings[i].text %>
+    </p>
+    <p><strong><u>
+          Date & Time</strong></u><br>
+      <%= jsonData.sightings[i].date_time %>
+    </p>
+    <p><strong><u>
+          City</strong></u><br>
+      <%= jsonData.sightings[i].city %>
+    </p>
+    <p><strong><u>
+          State</strong></u><br>
+      <%= jsonData.sightings[i].state %>
+    </p>
+    <p><strong><u>
+          Shape</strong></u><br>
+      <%= jsonData.sightings[i].shape %>
+    </p>
+    <p><strong><u>
+          Duration</strong></u><br>
+      <%= jsonData.sightings[i].duration %>
+    </p>
+    <p><strong><u>
+          Summary</strong></u><br>
+      <%= jsonData.sightings[i].summary %>
+    </p>
+    <br><br>
+    <hr>
+    <% } %>
+</body>
+
+</html>
